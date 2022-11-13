@@ -14,13 +14,14 @@ public class Application {
         collectionB.add(new B());
         collectionB.add(new B());
 
+        // Producer Extends Consumer Super (PECS)
         List<? extends A> listUpperBound = collectionA;
         List<? super B> listBottomBound = collectionB;
 
-        //listUpperBound.add(new A());    //AVOID
+        // listUpperBound.add(new A());    //AVOID
         A elementA = listUpperBound.get(0);
 
         listBottomBound.add(new B());
-        //B elementB = listBottomBound.get(0);   //AVOID
+        // B elementB = listBottomBound.get(0);   //AVOID
     }
 }
