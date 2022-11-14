@@ -2,7 +2,7 @@ package nestedclasses.examplesfromlecture;
 
 import java.util.Iterator;
 
-public class Application {
+public class Main {
     public static void main(String[] args) {
         Journal journal = new Journal();
 

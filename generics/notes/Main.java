@@ -1,6 +1,6 @@
 package generics.notes;
 
-public class Application {
+public class Main {
     public static void main(String[] args) {
         SimplePrinter simplePrinter = new SimplePrinter();
 

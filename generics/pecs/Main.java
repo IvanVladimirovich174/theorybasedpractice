@@ -3,7 +3,7 @@ package generics.pecs;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Application {
+public class Main {
     public static void main(String[] args) {
         List<A> collectionA = new ArrayList<>();
         List<B> collectionB = new ArrayList<>();
