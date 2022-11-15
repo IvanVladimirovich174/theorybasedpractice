@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.function.Predicate;
 
-public class TestCollectionInterfaces {
+public class TestMethodsOfCollectionInterface {
     public static void main(String[] args) {
         Collection<Integer> collection = new ArrayList<>();
 
