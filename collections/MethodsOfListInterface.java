@@ -33,11 +33,11 @@ public class MethodsOfListInterface {
         System.out.println("Initial list:");
         System.out.println(list);
 
-        list.add(3,32);
+        list.add(3, 32);
         System.out.println("List after adding number 32 on 3-index position:");
         System.out.println(list);
 
-        list.add(6,720);
+        list.add(6, 720);
         System.out.println("List after adding number 720 on 6-index position:");
         System.out.println(list);
 
@@ -83,7 +83,7 @@ public class MethodsOfListInterface {
 
         // Using sort method with help of ascending order Comparator
         Comparator<Integer> comparatorAscending = (Integer leftElement, Integer rightElement) -> {
-          return leftElement.compareTo(rightElement);
+            return leftElement.compareTo(rightElement);
         };
 
         list.sort(comparatorAscending);
