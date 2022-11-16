@@ -41,7 +41,7 @@ public class MethodsOfCollectionInterface {
 
         // Clear collection
         collection.clear();
-        System.out.println("List after clearing: " + collection );
+        System.out.println("List after clearing: " + collection);
         System.out.println();
 
         // Checking, does collection contain element?
