@@ -1,11 +1,11 @@
 package collections;
 
-import java.util.ArrayDeque;
+import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class MethodsOfQueueInterface {
     public static void main(String[] args) {
-        Queue<Integer> queue = new ArrayDeque<>();
+        Queue<Integer> queue = new PriorityQueue<>();
 
         // Add some elements and return head element
         queue.offer(10);
