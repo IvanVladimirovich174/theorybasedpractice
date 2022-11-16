@@ -9,7 +9,10 @@ public class MethodsOfQueueInterface {
 
         // Add some elements and return head element
         queue.offer(10);
-        //queue.offer(null);    AVOID: queue couldn't contains null element
+        /*
+        AVOID: couldn't contains null element, but LinkedList can
+        queue.addLast(null);
+         */
         queue.offer(20);
 
         System.out.println("Head element ---> " + queue + " <--- Tail element");
