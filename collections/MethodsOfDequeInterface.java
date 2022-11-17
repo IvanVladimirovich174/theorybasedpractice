@@ -69,5 +69,19 @@ public class MethodsOfDequeInterface {
             System.out.print(deque.pollLast() + " ");
         }
         System.out.println();
+
+        // Clear deque
+        deque.clear();
+
+        // Push method equals addFirst method
+        deque.push(10);
+        deque.push(20);
+        deque.push(30);
+        deque.addFirst(40);
+        System.out.println(deque);
+
+        // Pop method equals removeFirst method
+        deque.pop();
+        System.out.println(deque);
     }
 }
