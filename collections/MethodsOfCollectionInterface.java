@@ -68,7 +68,7 @@ public class MethodsOfCollectionInterface {
         System.out.println("Another collection after adding first collection: " + anotherCollection);
         System.out.println();
 
-        // RemoveIf element < 30
+        // Using RemoveIf method to remove elements which < 30
         Predicate<Integer> removeIntegerIf = (Integer element) -> {
             return element < 30;
         };
