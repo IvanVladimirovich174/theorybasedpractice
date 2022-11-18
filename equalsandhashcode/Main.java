@@ -23,7 +23,7 @@ public class Main {
         System.out.println("User3 hashCode = " + user3.hashCode());
         System.out.println();
 
-        // Contains method use equals method
+        // Contains method uses equals method
         List<User> listUsers = new ArrayList<>();
         listUsers.add(user1);
         listUsers.add(user2);
