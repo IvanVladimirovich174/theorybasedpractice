@@ -1,6 +1,6 @@
 package comparable;
 
-public class User {
+public class User implements Comparable<User> {
     private String name;
     private int age;
     private String city;
@@ -24,11 +24,16 @@ public class User {
     }
 
     @Override
+    public int compareTo(User o) {
+        return this.city.compareTo(o.city);
+    }
+
+    @Override
     public String toString() {
         return "User{" +
                 "name='" + name + '\'' +
-                ", city='" + city + '\'' +
                 ", age=" + age +
+                ", city='" + city + '\'' +
                 '}';
     }
 }
