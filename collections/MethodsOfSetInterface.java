@@ -38,15 +38,5 @@ public class MethodsOfSetInterface {
         linkedHashSet.add(-1);
 
         System.out.println("LinkedHashSet: " + linkedHashSet);
-
-        // TreeSet
-        Set<Integer> treeSet = new TreeSet<>();
-
-        // Automatically creates ascending (lexicographic) order
-        treeSet.add(10);
-        treeSet.add(20);
-        treeSet.add(-1);
-
-        System.out.println("TreeSet: " + treeSet);
     }
 }
