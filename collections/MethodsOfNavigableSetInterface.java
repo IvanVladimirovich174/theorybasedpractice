@@ -36,7 +36,7 @@ public class MethodsOfNavigableSetInterface {
 
 
         // .subSet() method with bounds
-        NavigableSet<Integer> subSet = treeSet.subSet(2,true,10, true);
+        NavigableSet<Integer> subSet = treeSet.subSet(2, true, 10, true);
         System.out.println("SubSet [2, 10]: " + subSet);
 
         // .headSet() method with bounds
@@ -44,7 +44,7 @@ public class MethodsOfNavigableSetInterface {
         System.out.println("HeadSet [head, 5]: " + headSet);
 
         // .tailSet() method with bounds
-        NavigableSet<Integer> tailSet = treeSet.tailSet(5,false);
+        NavigableSet<Integer> tailSet = treeSet.tailSet(5, false);
         System.out.println("TailSet (5, tail]: " + tailSet);
 
         // .descendingSet
