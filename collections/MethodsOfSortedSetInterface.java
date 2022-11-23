@@ -12,7 +12,7 @@ public class MethodsOfSortedSetInterface {
             treeSet.add(i);
         }
 
-        System.out.println("Result:");
+        System.out.println("TreeSet:");
         for (Integer number : treeSet) {
             System.out.print(number + " ");
         }
@@ -27,21 +27,20 @@ public class MethodsOfSortedSetInterface {
 
         // .subSet() method
         SortedSet<Integer> subSet = treeSet.subSet(2, 10);
-        System.out.println("SubSet: " + subSet);
+        System.out.println("SubSet [2, 10): " + subSet);
 
         subSet = treeSet.subSet(2, 200);
-        System.out.println("SubSet: " + subSet);
+        System.out.println("SubSet [2, 200): " + subSet);
 
         // .headSet() method
         SortedSet<Integer> headSet = treeSet.headSet(5);
-        System.out.println("HeadSet: " + headSet);
-
+        System.out.println("HeadSet [head, 5): " + headSet);
 
         headSet = treeSet.headSet(-10);
-        System.out.println("HeadSet: " + headSet);
+        System.out.println("HeadSet [head, -10): " + headSet);
 
         // .tailSet() method
         SortedSet<Integer> tailSet = treeSet.tailSet(7);
-        System.out.println("TailSet: " + tailSet);
+        System.out.println("TailSet [7, tail]: " + tailSet);
     }
 }
