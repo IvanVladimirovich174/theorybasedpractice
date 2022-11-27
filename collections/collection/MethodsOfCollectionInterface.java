@@ -74,6 +74,6 @@ public class MethodsOfCollectionInterface {
         };
 
         anotherCollection.removeIf(removeIntegerIf);
-        System.out.println("Another collection after deleting with help of Predicate: " + anotherCollection);
+        System.out.println("Another collection after deleting with help of PredicateTest: " + anotherCollection);
     }
 }
