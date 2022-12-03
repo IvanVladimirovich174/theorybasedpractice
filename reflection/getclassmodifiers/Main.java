@@ -59,10 +59,34 @@ public class Main {
         } catch (NoSuchFieldException | IllegalAccessException e) {
             System.out.println(e.getMessage());
         }
-    }
+        System.out.println();
 
-    // Print all fields of class, their modifiers and types
-    public static void printAllFields(Class<?> cls) {
+        // Print all fields of class, their modifiers and types
+        for (Field field : Task.class.getDeclaredFields()) {
+            int mod = field.getModifiers();
 
+            if (Modifier.isPublic(mod)) {
+                System.out.println("Public ");
+            }
+
+            if (Modifier.isProtected(mod)) {
+                System.out.println("Protected ");
+            }
+
+            if (Modifier.isPrivate(mod)) {
+                System.out.println("Private ");
+            }
+
+            if (Modifier.isStatic(mod)) {
+                System.out.println("Static ");
+            }
+
+            if (Modifier.isFinal(mod)) {
+                System.out.println("Final ");
+            }
+
+            System.out.println("Field name: " + field.getName());
+            System.out.println("Field type: " + field.getType().getSimpleName());
+        }
     }
 }
