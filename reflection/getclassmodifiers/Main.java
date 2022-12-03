@@ -88,5 +88,23 @@ public class Main {
             System.out.println("Field name: " + field.getName());
             System.out.println("Field type: " + field.getType().getSimpleName());
         }
+        System.out.println();
+
+        // Create instance of Task class and print values of his fields
+        // For private fields should use .setAccessible() method
+        try {
+            Task task = new Task();
+            for (Field field : task.getClass().getDeclaredFields()) {
+                int mod = field.getModifiers();
+
+                if (Modifier.isPrivate(mod)) {
+                    field.setAccessible(true);
+                }
+
+                System.out.println(field.getName() + " " + field.get(task));
+            }
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
