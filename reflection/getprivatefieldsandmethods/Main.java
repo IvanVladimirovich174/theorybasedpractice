@@ -1,4 +1,4 @@
-package reflection.getPrivateFieldsAndMethods;
+package reflection.getprivatefieldsandmethods;
 
 public class Main {
     public static void main(String[] args) {
