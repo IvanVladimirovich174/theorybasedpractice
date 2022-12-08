@@ -3,7 +3,6 @@ package collections.set;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
-import java.util.TreeSet;
 
 public class MethodsOfSetInterface {
     public static void main(String[] args) {
