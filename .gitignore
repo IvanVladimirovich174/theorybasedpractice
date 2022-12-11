@@ -33,11 +33,11 @@ out/
 *.ipr
 *.iws
 
-springjdbc/.idea
-springjdbc/.mvn
-springjdbc/target
-springjdbc/HELP.md
-springjdbc/mvnw
-springjdbc/mvnw.cmd
-springjdbc/springjdbc.iml
-springjdbc/src/test
+spring/springjdbc/.idea
+spring/springjdbc/.mvn
+spring/springjdbc/target
+spring/springjdbc/HELP.md
+spring/springjdbc/mvnw
+spring/springjdbc/mvnw.cmd
+spring/springjdbc/springjdbc.iml
+spring/springjdbc/src/test
