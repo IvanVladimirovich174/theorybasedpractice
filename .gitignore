@@ -34,7 +34,7 @@ out/
 *.iws
 
 spring/firstspringjdbc/.idea
-spring/firstspringjdbc/.mv
+spring/firstspringjdbc/.mvn
 spring/firstspringjdbc/target
 spring/firstspringjdbc/HELP.md
 spring/firstspringjdbc/mvnw
