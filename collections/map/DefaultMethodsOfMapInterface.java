@@ -7,6 +7,8 @@ import java.util.function.Function;
 
 public class DefaultMethodsOfMapInterface {
     public static void main(String[] args) {
+
+        // HashMap
         Map<String, Integer> hashMap = new HashMap<>();
 
         // .getOrDefault() method
