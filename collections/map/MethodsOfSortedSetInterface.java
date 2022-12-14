@@ -10,7 +10,7 @@ public class MethodsOfSortedSetInterface {
         SortedMap<Integer, String> treeMap = new TreeMap<>();
 
         for (int i = 0; i <= 5; i++) {
-            treeMap.put(i,"Value_" + i);
+            treeMap.put(i, "Value_" + i);
         }
 
         System.out.println("TreeMap: " + treeMap);
@@ -20,5 +20,17 @@ public class MethodsOfSortedSetInterface {
 
         // .lastKey() method
         System.out.println("LastKey: " + treeMap.lastKey());
+
+        // .subMap() method
+        SortedMap<Integer, String> subMap = treeMap.subMap(1, 3);
+        System.out.println("SubMap: " + subMap);
+
+        // .headMap() method
+        SortedMap<Integer, String> headMap = treeMap.headMap(3);
+        System.out.println("HeadMap: " + headMap);
+
+        // .tailMap() method
+        SortedMap<Integer, String> tailMap = treeMap.tailMap(3);
+        System.out.println("HeadMap: " + tailMap);
     }
 }
