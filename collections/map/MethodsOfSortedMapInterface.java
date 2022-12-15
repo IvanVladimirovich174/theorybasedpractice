@@ -3,7 +3,7 @@ package collections.map;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-public class MethodsOfSortedSetInterface {
+public class MethodsOfSortedMapInterface {
     public static void main(String[] args) {
 
         // TreeMap
