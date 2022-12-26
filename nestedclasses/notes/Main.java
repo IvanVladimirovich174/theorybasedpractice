@@ -1,7 +1,5 @@
 package nestedclasses.notes;
 
-import nestedclasses.notes.MySomeClass;
-
 public class Main {
     public static void main(String[] args) {
 
