@@ -20,7 +20,7 @@ public class StringPool {
         String str3 = "TopJava";
         String str4 = "Top" + "Java";
 
-        System.out.println("Is str3 == str4 " + (str3 == str4));
+        System.out.println("Is str3 == str4? " + (str3 == str4));
         System.out.println();
 
         // Rest part of heap
@@ -28,7 +28,14 @@ public class StringPool {
         String str6 = "Java";
         String str7 = "Top" + str6;
 
-        System.out.println("Is str5 == str7 " + (str5 == str7));
+        System.out.println("Is str5 == str7? " + (str5 == str7));
         System.out.println();
+
+        String test1 = "Top";
+        String test2 = "Java";
+        String test3 = "TopJava";
+
+        String test = test1.concat(test2);
+        System.out.println("Is test == test3? " + (test == test3));
     }
 }
