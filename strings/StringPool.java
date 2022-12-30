@@ -31,11 +31,22 @@ public class StringPool {
         System.out.println("Is str5 == str7? " + (str5 == str7));
         System.out.println();
 
+        // Rest part of heap
         String test1 = "Top";
         String test2 = "Java";
         String test3 = "TopJava";
 
-        String test = test1.concat(test2);
-        System.out.println("Is test == test3? " + (test == test3));
+        String testConcat1 = test1.concat(test2);
+        System.out.println("Is testConcat1 == test3? " + (testConcat1 == test3));
+        System.out.println();
+
+        // Rest part of heap
+        String test4 = "Top";
+        String test5 = "Java";
+        String test6 = "TopJava";
+
+        String testConcat2 = "Top".concat("Java");
+        System.out.println("Is testConcat2 == test3? " + (testConcat2 == test3));
+        System.out.println();
     }
 }
