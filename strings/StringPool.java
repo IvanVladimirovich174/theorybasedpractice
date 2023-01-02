@@ -42,6 +42,17 @@ public class StringPool {
         System.out.println("Is str10 == str11? " + (str10 == str11));
         System.out.println();
 
+        // StringPool
+        String str12 = "TopJava";
+        String str13 = "TopJava";
+        String str14 = new String("TopJava").intern();
+        String str15 = new String("TopJava").intern();
+
+        System.out.println("Is str12 == str13? " + (str12 == str13));
+        System.out.println("Is str13 == str14? " + (str13 == str14));
+        System.out.println("Is str14 == str11? " + (str14 == str15));
+        System.out.println();
+
         // Rest part of heap
         String test1 = "Top";
         String test2 = "Java";
