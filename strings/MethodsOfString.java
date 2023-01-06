@@ -42,10 +42,16 @@ public class MethodsOfString {
         System.out.println("str5 after trimming: " + str5.trim());
 
         // startsWith() method
-        System.out.println("Is str1 starts with \"Welcome to J\"" + str1.startsWith("Welcome to J"));
-        System.out.println("Is str2 starts with \"Welcome to J\"" + str2.startsWith("Welcome to J"));
-        System.out.println("Is str3 starts with \"Welcome to J\"" + str3.startsWith("Welcome to J"));
-        System.out.println("Is str4 starts with \"Welcome to J\"" + str4.startsWith("Welcome to J"));
+        System.out.println("Is str1 start with \"Welcome to J\"" + str1.startsWith("Welcome to J"));
+        System.out.println("Is str2 start with \"Welcome to J\"" + str2.startsWith("Welcome to J"));
+        System.out.println("Is str3 start with \"Welcome to J\"" + str3.startsWith("Welcome to J"));
+        System.out.println("Is str4 start with \"Welcome to J\"" + str4.startsWith("Welcome to J"));
+
+        // endsWith() method
+        System.out.println("Is str1 end with \"Welcome to J\"" + str1.endsWith("Java"));
+        System.out.println("Is str2 end with \"Welcome to J\"" + str2.endsWith("Java"));
+        System.out.println("Is str3 end with \"Welcome to J\"" + str3.endsWith("Java"));
+        System.out.println("Is str4 end with \"Welcome to J\"" + str4.endsWith("Java"));
 
         // equals
         System.out.println("Is str1 equals str2? " + str1.equals(str2));
