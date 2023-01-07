@@ -41,17 +41,23 @@ public class MethodsOfString {
         String str5 = "\r\n\t\f        Java is the best programming language\t\r\f\n";
         System.out.println("str5 after trimming: " + str5.trim());
 
-        // startsWith() method
+        // .startsWith() method
         System.out.println("Is str1 start with \"Welcome to J\"" + str1.startsWith("Welcome to J"));
         System.out.println("Is str2 start with \"Welcome to J\"" + str2.startsWith("Welcome to J"));
         System.out.println("Is str3 start with \"Welcome to J\"" + str3.startsWith("Welcome to J"));
         System.out.println("Is str4 start with \"Welcome to J\"" + str4.startsWith("Welcome to J"));
 
-        // endsWith() method
+        // .endsWith() method
         System.out.println("Is str1 end with \"Welcome to J\"" + str1.endsWith("Java"));
         System.out.println("Is str2 end with \"Welcome to J\"" + str2.endsWith("Java"));
         System.out.println("Is str3 end with \"Welcome to J\"" + str3.endsWith("Java"));
         System.out.println("Is str4 end with \"Welcome to J\"" + str4.endsWith("Java"));
+
+        // .contains() method
+        System.out.println("Is str1 contain \"Java\"" + str1.contains("Java"));
+        System.out.println("Is str2 contain \"Java\"" + str2.contains("Java"));
+        System.out.println("Is str2 contain \"Java\"" + str3.contains("C++"));
+        System.out.println("Is str2 contain \"Java\"" + str4.contains("Python"));
 
         // equals
         System.out.println("Is str1 equals str2? " + str1.equals(str2));
