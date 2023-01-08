@@ -46,25 +46,35 @@ public class MethodsOfString {
         System.out.println("Is str2 start with \"Welcome to J\"" + str2.startsWith("Welcome to J"));
         System.out.println("Is str3 start with \"Welcome to J\"" + str3.startsWith("Welcome to J"));
         System.out.println("Is str4 start with \"Welcome to J\"" + str4.startsWith("Welcome to J"));
+        System.out.println();
 
         // .endsWith() method
-        System.out.println("Is str1 end with \"Welcome to J\"" + str1.endsWith("Java"));
-        System.out.println("Is str2 end with \"Welcome to J\"" + str2.endsWith("Java"));
-        System.out.println("Is str3 end with \"Welcome to J\"" + str3.endsWith("Java"));
-        System.out.println("Is str4 end with \"Welcome to J\"" + str4.endsWith("Java"));
+        System.out.println("Is str1 end with \"Welcome to J\": " + str1.endsWith("Java"));
+        System.out.println("Is str2 end with \"Welcome to J\": " + str2.endsWith("Java"));
+        System.out.println("Is str3 end with \"Welcome to J\": " + str3.endsWith("Java"));
+        System.out.println("Is str4 end with \"Welcome to J\": " + str4.endsWith("Java"));
+        System.out.println();
 
         // .contains() method
-        System.out.println("Is str1 contain \"Java\"" + str1.contains("Java"));
-        System.out.println("Is str2 contain \"Java\"" + str2.contains("Java"));
-        System.out.println("Is str2 contain \"Java\"" + str3.contains("C++"));
-        System.out.println("Is str2 contain \"Java\"" + str4.contains("Python"));
+        System.out.println("Is str1 contain \"Java\": " + str1.contains("Java"));
+        System.out.println("Is str2 contain \"Java\": " + str2.contains("Java"));
+        System.out.println("Is str2 contain \"Java\": " + str3.contains("C++"));
+        System.out.println("Is str2 contain \"Java\": " + str4.contains("Python"));
+        System.out.println();
 
-        // equals
+        // substring() method
+        System.out.println("Substring of str1: " + str1.substring(11));
+        System.out.println("Substring of str2: " + str2.substring(11));
+        System.out.println("Substring of str3: " + str3.substring(11));
+        System.out.println("Substring of str4: " + str4.substring(11));
+        System.out.println();
+
+        // .equals() method
         System.out.println("Is str1 equals str2? " + str1.equals(str2));
         System.out.println("Is str2 equals str3? " + str2.equals(str3));
         System.out.println();
 
-        // compareTo
+        // compareTo() method
         System.out.println("The result of comparing str1 and str2: " + str1.compareTo(str2));
         System.out.println("The result of comparing str2 and str3: " + str2.compareTo(str3));
         System.out.println("The result of comparing str2 and str4: " + str2.compareTo(str4));
