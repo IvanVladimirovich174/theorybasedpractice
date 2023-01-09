@@ -62,11 +62,18 @@ public class MethodsOfString {
         System.out.println("Is str2 contain \"Java\": " + str4.contains("Python"));
         System.out.println();
 
-        // substring() method
+        // substring() method with 1 parameter
         System.out.println("Substring of str1: " + str1.substring(11));
         System.out.println("Substring of str2: " + str2.substring(11));
         System.out.println("Substring of str3: " + str3.substring(11));
         System.out.println("Substring of str4: " + str4.substring(11));
+        System.out.println();
+
+        // substring() method with 2 parameters
+        System.out.println("Substring of str1: " + str1.substring(0, 11));
+        System.out.println("Substring of str2: " + str2.substring(0, 11));
+        System.out.println("Substring of str3: " + str3.substring(0, 11));
+        System.out.println("Substring of str4: " + str4.substring(0, 11));
         System.out.println();
 
         // .equals() method
