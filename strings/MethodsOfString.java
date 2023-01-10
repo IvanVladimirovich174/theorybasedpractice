@@ -76,11 +76,18 @@ public class MethodsOfString {
         System.out.println("Substring of str4: " + str4.substring(0, 11));
         System.out.println();
 
-        // .indexOf() method
+        // .indexOf(ch) method
         System.out.println("First index of 'J'-char at str1: " + str1.indexOf('J'));
         System.out.println("First index of 'J'-char at str2: " + str2.indexOf('J'));
         System.out.println("First index of 'J'-char at str3: " + str3.indexOf('J'));
         System.out.println("First index of 'J'-char at str4: " + str4.indexOf('J'));
+        System.out.println();
+
+        // indexOf(ch, fromIndex)
+        System.out.println("First index of 'J'-char at str1 from beginIndex 11: " + str1.indexOf('J',11));
+        System.out.println("First index of 'J'-char at str2 from beginIndex 11: " + str2.indexOf('J',11));
+        System.out.println("First index of 'J'-char at str3 from beginIndex 11: " + str3.indexOf('J',11));
+        System.out.println("First index of 'J'-char at str4 from beginIndex 11: " + str4.indexOf('J',11));
         System.out.println();
 
         // .equals() method
