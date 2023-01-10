@@ -83,7 +83,7 @@ public class MethodsOfString {
         System.out.println("First index of 'J'-char at str4: " + str4.indexOf('J'));
         System.out.println();
 
-        // indexOf(ch, fromIndex)
+        // indexOf(ch, fromIndex) method
         System.out.println("First index of 'J'-char at str1 from beginIndex 11: " + str1.indexOf('J',11));
         System.out.println("First index of 'J'-char at str2 from beginIndex 11: " + str2.indexOf('J',11));
         System.out.println("First index of 'J'-char at str3 from beginIndex 11: " + str3.indexOf('J',11));
