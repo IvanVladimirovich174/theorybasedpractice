@@ -97,6 +97,13 @@ public class MethodsOfString {
         System.out.println("First index of \"Java\" substring at str4: " + str4.indexOf("Java"));
         System.out.println();
 
+        // indexOf(str, beginIndex) method
+        System.out.println("First index of \"Java\" substring at str1 from beginIndex 11: " + str1.indexOf("Java", 11));
+        System.out.println("First index of \"Java\" substring at str2 from beginIndex 11: " + str2.indexOf("Java", 11));
+        System.out.println("First index of \"Java\" substring at str3 from beginIndex 11: " + str3.indexOf("Java", 11));
+        System.out.println("First index of \"Java\" substring at str4 from beginIndex 11: " + str4.indexOf("Java", 11));
+        System.out.println();
+
         // .equals() method
         System.out.println("Is str1 equals str2? " + str1.equals(str2));
         System.out.println("Is str2 equals str3? " + str2.equals(str3));
