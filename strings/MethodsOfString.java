@@ -104,6 +104,13 @@ public class MethodsOfString {
         System.out.println("First index of \"Java\" substring at str4 from beginIndex 11: " + str4.indexOf("Java", 11));
         System.out.println();
 
+        // lastIndexOf(ch) method
+        System.out.println("Last index of 'o'-char at str1: " + str1.lastIndexOf('o'));
+        System.out.println("Last index of 'o'-char at str2: " + str2.lastIndexOf('o'));
+        System.out.println("Last index of 'o'-char at str3: " + str3.lastIndexOf('o'));
+        System.out.println("Last index of 'o'-char at str4: " + str4.lastIndexOf('o'));
+        System.out.println();
+
         // .equals() method
         System.out.println("Is str1 equals str2? " + str1.equals(str2));
         System.out.println("Is str2 equals str3? " + str2.equals(str3));
