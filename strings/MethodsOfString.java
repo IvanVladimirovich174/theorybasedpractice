@@ -97,7 +97,7 @@ public class MethodsOfString {
         System.out.println("First index of \"Java\" substring at str4: " + str4.indexOf("Java"));
         System.out.println();
 
-        // indexOf(str, beginIndex) method
+        // indexOf(str, fromIndex) method
         System.out.println("First index of \"Java\" substring at str1 from beginIndex 11: " + str1.indexOf("Java", 11));
         System.out.println("First index of \"Java\" substring at str2 from beginIndex 11: " + str2.indexOf("Java", 11));
         System.out.println("First index of \"Java\" substring at str3 from beginIndex 11: " + str3.indexOf("Java", 11));
@@ -109,6 +109,13 @@ public class MethodsOfString {
         System.out.println("Last index of 'o'-char at str2: " + str2.lastIndexOf('o'));
         System.out.println("Last index of 'o'-char at str3: " + str3.lastIndexOf('o'));
         System.out.println("Last index of 'o'-char at str4: " + str4.lastIndexOf('o'));
+        System.out.println();
+
+        // lastIndexOf(ch, fromIndex) method
+        System.out.println("Last index of 'o'-char at str1 to upper index 4: " + str1.lastIndexOf('o', 4));
+        System.out.println("Last index of 'o'-char at str2 to upper index 4: " + str2.lastIndexOf('o', 4));
+        System.out.println("Last index of 'o'-char at str3 to upper index 4: " + str3.lastIndexOf('o', 4));
+        System.out.println("Last index of 'o'-char at str4 to upper index 4: " + str4.lastIndexOf('o', 4));
         System.out.println();
 
         // .equals() method
