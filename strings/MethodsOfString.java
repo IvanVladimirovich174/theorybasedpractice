@@ -118,6 +118,13 @@ public class MethodsOfString {
         System.out.println("Last index of 'o'-char at str4 to upper index 4: " + str4.lastIndexOf('o', 4));
         System.out.println();
 
+        // lastIndexOf(str) method
+        System.out.println("Last index of \"to\" substring at str1: " + str1.lastIndexOf("to"));
+        System.out.println("Last index of \"to\" substring at str2: " + str2.lastIndexOf("to"));
+        System.out.println("Last index of \"to\" substring at str3: " + str3.lastIndexOf("to"));
+        System.out.println("Last index of \"to\" substring at str4: " + str4.lastIndexOf("to"));
+        System.out.println();
+
         // .equals() method
         System.out.println("Is str1 equals str2? " + str1.equals(str2));
         System.out.println("Is str2 equals str3? " + str2.equals(str3));
