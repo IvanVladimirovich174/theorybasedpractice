@@ -125,6 +125,13 @@ public class MethodsOfString {
         System.out.println("Last index of \"to\" substring at str4: " + str4.lastIndexOf("to"));
         System.out.println();
 
+        // lastIndexOf(str, fromIndex)
+        System.out.println("Last index of \"to\" substring at str1 to upper index 4: " + str1.lastIndexOf("to", 8));
+        System.out.println("Last index of \"to\" substring at str2 to upper index 4: " + str2.lastIndexOf("to", 8));
+        System.out.println("Last index of \"to\" substring at str3 to upper index 4: " + str3.lastIndexOf("to", 8));
+        System.out.println("Last index of \"to\" substring at str4 to upper index 4: " + str4.lastIndexOf("to", 8));
+        System.out.println();
+
         // .equals() method
         System.out.println("Is str1 equals str2? " + str1.equals(str2));
         System.out.println("Is str2 equals str3? " + str2.equals(str3));
