@@ -132,6 +132,13 @@ public class MethodsOfString {
         System.out.println("Last index of \"to\" substring at str4 to upper index 4: " + str4.lastIndexOf("to", 8));
         System.out.println();
 
+        // .replace(ch) method
+        System.out.println("After replace 'm'-char to 'M': " + str1.replace('m', 'M'));
+        System.out.println("After replace 'm'-char to 'M': " + str2.replace('m', 'M'));
+        System.out.println("After replace 'm'-char to 'M': " + str3.replace('m', 'M'));
+        System.out.println("After replace 'm'-char to 'M': " + str4.replace('m', 'M'));
+        System.out.println();
+
         // .equals() method
         System.out.println("Is str1 equals str2? " + str1.equals(str2));
         System.out.println("Is str2 equals str3? " + str2.equals(str3));
