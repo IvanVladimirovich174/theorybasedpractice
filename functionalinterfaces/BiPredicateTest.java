@@ -19,6 +19,5 @@ public class BiPredicateTest {
 
         System.out.println(biPredicateTest2.test(10, 2));
         System.out.println(biPredicateTest2.test(5, 1));
-        System.out.println();
     }
 }

@@ -19,6 +19,5 @@ public class PredicateTest {
 
         System.out.println(predicateTest2.test(10));
         System.out.println(predicateTest2.test(5));
-        System.out.println();
     }
 }
