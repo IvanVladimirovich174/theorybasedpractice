@@ -11,8 +11,10 @@ public class FunctionTest {
             }
         };
 
-        Function<Integer,String> functionTest2 = (Integer number) -> {
-            return String.valueOf(number);
-        };
+        System.out.println("Result: " + functionTest1.apply(35));
+
+        Function<Integer, String> functionTest2 = String::valueOf;
+
+        System.out.println("Result: " + functionTest2.apply(35));
     }
 }

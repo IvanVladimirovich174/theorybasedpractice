@@ -13,7 +13,7 @@ public class ConsumerTest {
 
         consumerTest1.accept("Test Consumer<T> interface");
 
-        Consumer<String> consumerTest2 = s -> System.out.println(s);
+        Consumer<String> consumerTest2 = System.out::println;
 
         consumerTest2.accept("Test Consumer<T> interface");
     }
