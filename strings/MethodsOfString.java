@@ -1,5 +1,7 @@
 package strings;
 
+import java.util.Arrays;
+
 public class MethodsOfString {
     public static void main(String[] args) {
         String str1 = "Welcome to Java";
@@ -130,6 +132,15 @@ public class MethodsOfString {
         System.out.println("Last index of \"to\" substring at str2 to upper index 4: " + str2.lastIndexOf("to", 8));
         System.out.println("Last index of \"to\" substring at str3 to upper index 4: " + str3.lastIndexOf("to", 8));
         System.out.println("Last index of \"to\" substring at str4 to upper index 4: " + str4.lastIndexOf("to", 8));
+        System.out.println();
+
+        // .split(regex)
+        String[] arrayOfStr1 = str1.split(" ");
+
+        System.out.println("Parts of str1 splited by space: ");
+        for (String str : arrayOfStr1) {
+            System.out.println(str);
+        }
         System.out.println();
 
         // .replace(ch) method
