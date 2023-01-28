@@ -51,11 +51,16 @@ public class StreamsTest {
         System.out.println(listOfIntegers);
         System.out.println(anotherList);
 
-
-        Map<Integer,Integer> set = listOfIntegers.stream()
+        //
+        listOfIntegers.add(3);
+        Map<Integer, Integer> map = listOfIntegers.stream()
                 .filter((Integer digit) -> (digit >= 2 && digit <= 4))
                 .map((Integer digit) -> digit * 2)
-                .collect(Collectors.toMap(k -> k, a -> 2 * a));
-        System.out.println(set);
+                .collect(Collectors.toMap(k -> k, a -> 2 * a, (oldValue, newValue) -> {
+                    System.out.println("OldValue= " + oldValue);
+                    System.out.println("NewValue= " + newValue);
+                    return (oldValue + newValue);
+                }));
+        System.out.println(map);
     }
 }
