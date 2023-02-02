@@ -1,5 +1,6 @@
 package messageprovider;
 
 public interface MessageRenderer {
-    void render(String message);
+    void setMessageProvider(MessageProvider messageProvider);
+    void render();
 }

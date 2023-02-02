@@ -26,6 +26,7 @@ public class MainFramework {
 
             messageProvider = (MessageProvider) Class.forName(messageProviderClass).newInstance();
             messageRenderer = (MessageRenderer) Class.forName(renderedClass).newInstance();
+            messageRenderer.setMessageProvider(messageProvider);
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
             throw new RuntimeException("Failed to init framework error=" + e, e);
         }
