@@ -1,4 +1,6 @@
-public class ArgumentsMessageProvider {
+package messageprovider;
+
+public class ArgumentsMessageProvider implements MessageProvider {
     private final String message;
 
     public ArgumentsMessageProvider(String[] args) {
@@ -9,6 +11,7 @@ public class ArgumentsMessageProvider {
         message = args[0];
     }
 
+    @Override
     public String getMessage() {
         return message;
     }
