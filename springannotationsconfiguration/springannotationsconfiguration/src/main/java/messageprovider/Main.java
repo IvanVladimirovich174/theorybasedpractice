@@ -1,11 +1,15 @@
 package messageprovider;
 
+import framework.MainFramework;
+
 public class Main {
     public static void main(String[] args) {
-        MessageProvider argumentsMessageProvider = new DefaultMessageProvider();
-        MessageRenderer messageRenderer = new JsonMessageRenderer();
+        MainFramework mainFramework = new MainFramework();
 
-        String message = argumentsMessageProvider.getMessage();
+        MessageProvider messageProvider = mainFramework.getMessageProvider();
+        String message = messageProvider.getMessage();
+
+        MessageRenderer messageRenderer = mainFramework.getMessageRenderer();
         messageRenderer.render(message);
     }
 }
