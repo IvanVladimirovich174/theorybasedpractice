@@ -1,12 +1,15 @@
 package messageprovider;
 
-import framework.MainFramework;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
-        MainFramework mainFramework = new MainFramework();
-        MessageRenderer messageRenderer = mainFramework.getMessageRenderer();
+        ApplicationContext context = new AnnotationConfigApplicationContext("messageprovider");
 
-        messageRenderer.render();
+        MessageProvider provider = (MessageProvider) context.getBean("messageProvider");
+        MessageRenderer renderer = (MessageRenderer) context.getBean("messageRenderer");
+
+        renderer.render();
     }
 }
