@@ -2,7 +2,7 @@ package functionalinterfaces.stringreverse;
 
 public class Main {
     public static void main(String[] args) {
-        ReverseInterface reverseInterface = (str -> {
+        ReverseInterface reverseInterface1 = (str -> {
             String result = "";
 
             for (int i = str.length() - 1; i >= 0; --i) {
@@ -12,6 +12,9 @@ public class Main {
             return result;
         });
 
-        System.out.println(reverseInterface.reverse("ABC-DEF"));
+        System.out.println(reverseInterface1.reverse("Lambda"));
+
+        ReverseInterface reverseInterface2 = (str) -> new StringBuilder(str).reverse().toString();
+        System.out.println(reverseInterface2.reverse("Lambda"));
     }
 }
