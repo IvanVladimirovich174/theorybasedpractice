@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class StreamsTest {
+public class StreamsTest1 {
     public static void main(String[] args) {
 
         // .of() method
