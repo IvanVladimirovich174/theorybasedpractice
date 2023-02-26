@@ -17,7 +17,13 @@ public class StreamTest6 {
         Map<String, Long> frequencyMap = names
                 .stream()
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-
         System.out.println(frequencyMap);
+        System.out.println();
+
+        Map<String, Integer> concurrentfrequencyMap = names
+                .parallelStream()
+                .collect(Collectors.toConcurrentMap(w -> w, w -> 1, Integer::sum));
+
+        System.out.println(concurrentfrequencyMap);
     }
 }
