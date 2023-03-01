@@ -6,11 +6,12 @@ import java.util.List;
 import java.util.Map;
 
 public class ProductCache {
-    private Map<String,Product> cache = new HashMap<>();
+    private Map<String, Product> cache = new HashMap<>();
 
     public List<Product> getAll() {
         return new ArrayList<>(cache.values());
     }
+
 
     public Product get(String id) {
         return cache.get(id);

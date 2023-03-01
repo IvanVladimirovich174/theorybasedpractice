@@ -1,9 +1,12 @@
+<jsp:useBean id="author" scope="request" type=""/>
+<jsp:useBean id="title" scope="request" type=""/>
+
 <html>
-    <head>
-        <title>About</title>
-    </head>
-    <body>
-        <h1>${'title'}</h1>
-        Author:${'author'}
-    </body>
+<head>
+    <title>About</title>
+</head>
+<body>
+<h1>${title}</h1>
+Author:${author}
+</body>
 </html>
