@@ -1,12 +1,15 @@
 package com.authenticationandauthorization.service;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Component
 public class ProductCache {
-    private Map<String, Product> cache = new HashMap<>();
+    private final Map<String, Product> cache = new HashMap<>();
 
     public List<Product> getAll() {
         return new ArrayList<>(cache.values());
