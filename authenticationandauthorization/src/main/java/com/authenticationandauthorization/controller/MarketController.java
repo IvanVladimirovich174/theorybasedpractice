@@ -1,6 +1,7 @@
 package com.authenticationandauthorization.controller;
 
 import com.authenticationandauthorization.service.ProductCache;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,9 +10,10 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping("/market")
 public class MarketController {
-    private final ProductCache productCache;
+    private ProductCache productCache;
 
-    public MarketController(ProductCache productCache) {
+    @Autowired
+    public void setProductCache(ProductCache productCache) {
         this.productCache = productCache;
     }
 
@@ -19,7 +21,7 @@ public class MarketController {
     public ModelAndView getAllGoods() {
         ModelAndView modelAndView = new ModelAndView("/all_goods.jsp");
 
-        modelAndView.addObject("productList",productCache.getAll());
+        modelAndView.addObject("productList", productCache.getAll());
 
         return modelAndView;
     }
