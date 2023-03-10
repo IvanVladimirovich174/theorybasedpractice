@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping("/market")
 public class MarketController {
-    private ProductCache productCache;
+    private final ProductCache productCache;
 
     public MarketController(ProductCache productCache) {
         this.productCache = productCache;
@@ -17,8 +17,10 @@ public class MarketController {
 
     @GetMapping
     public ModelAndView getAllGoods() {
-        ModelAndView modelAndView = new ModelAndView("/all_goods,jsp");
+        ModelAndView modelAndView = new ModelAndView("/all_goods.jsp");
+
         modelAndView.addObject("productList",productCache.getAll());
+
         return modelAndView;
     }
 }
