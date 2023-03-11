@@ -15,6 +15,7 @@ import java.io.IOException;
 public class AuthController {
 
     private AuthenticationManager authenticationManager;
+    private final String SUCCESS_LOGIN_FORM = "/admin/create";
 
     @Autowired
     public void setAuthenticationManager(AuthenticationManager authenticationManager) {
@@ -35,7 +36,7 @@ public class AuthController {
 
         if (authenticationManager.authorize(login, password)) {
             httpSession.setAttribute("authObject", "AUTHENTICATED");
-            httpServletResponse.sendRedirect("/admin/create");
+            httpServletResponse.sendRedirect(SUCCESS_LOGIN_FORM);
             return null;
         } else {
             httpSession.removeAttribute("authObject");
@@ -45,5 +46,13 @@ public class AuthController {
 
             return loginForm;
         }
+    }
+
+    @PostMapping("/logout")
+    public void logout(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws IOException {
+        HttpSession session = httpServletRequest.getSession();
+
+        session.removeAttribute("authObject");
+        httpServletResponse.sendRedirect(SUCCESS_LOGIN_FORM);
     }
 }
