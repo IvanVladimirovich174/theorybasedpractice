@@ -13,7 +13,14 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class MySecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        super.configure(http);
+        http.csrf().ignoringAntMatchers("/admin/update")
+                .and()
+                .authorizeRequests()
+                .antMatchers("/info").permitAll()
+                .antMatchers("/market").permitAll()
+                .anyRequest().authenticated()
+                .and()
+                .formLogin();
     }
 
     @Bean
