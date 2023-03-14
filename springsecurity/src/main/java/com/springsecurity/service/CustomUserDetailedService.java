@@ -2,6 +2,7 @@ package com.springsecurity.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -24,6 +25,7 @@ public class CustomUserDetailedService implements UserDetailsService {
         }
 
         Collection<GrantedAuthority> authorities = new ArrayList<>();
+        authorities.add(new SimpleGrantedAuthority("ROLE_" + info.getRole()));
 
         return new User(info.getLogin(), info.getPassword(), authorities);
     }

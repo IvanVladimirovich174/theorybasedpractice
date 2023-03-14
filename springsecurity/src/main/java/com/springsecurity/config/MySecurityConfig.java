@@ -18,9 +18,12 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/info").permitAll()
                 .antMatchers("/market").permitAll()
+                .antMatchers("/admin/**").hasAnyRole("ADMIN")
                 .anyRequest().authenticated()
                 .and()
-                .formLogin();
+                .formLogin()
+                .and()
+                .exceptionHandling().accessDeniedPage("/access_denied.jsp");
     }
 
     @Bean
