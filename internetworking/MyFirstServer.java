@@ -4,6 +4,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.UUID;
 
 public class MyFirstServer {
     private final int port;
@@ -42,10 +43,14 @@ public class MyFirstServer {
         System.out.println(message);
         System.out.println();
 
-
+        String payload = "{\"id\": \"" + UUID.randomUUID().toString() + "\"}";
         PrintWriter writer = new PrintWriter(socket.getOutputStream());
-        writer.write("HTTP/1.1 200 OK");
+        writer.write("HTTP/1.1 200 OK\n");
+        writer.write("Content-length: " + payload.length() + "\n");
         writer.println();
+
+        writer.write(payload);
+
         writer.flush();
 
         System.out.println("Method processConnection() finished");
