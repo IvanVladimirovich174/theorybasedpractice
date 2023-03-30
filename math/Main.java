@@ -19,5 +19,8 @@ public class Main {
 
         int min = Math.min(1, 2);
         System.out.println(min);
+
+        double sin = Math.sin(Math.PI / 2);
+        System.out.println(sin);
     }
 }
