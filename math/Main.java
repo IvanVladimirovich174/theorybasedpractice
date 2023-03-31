@@ -22,5 +22,11 @@ public class Main {
 
         double sin = Math.sin(Math.PI / 2);
         System.out.println(sin);
+
+        double cos = Math.cos(Math.PI / 2);
+        System.out.println(cos);
+
+        double tng = Math.tan(Math.PI / 2);
+        System.out.println(tng);
     }
 }
