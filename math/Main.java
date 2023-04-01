@@ -2,14 +2,16 @@ public class Main {
     public static void main(String[] args) {
         double a = 0.45;
 
+        // rounded up to the nearest whole number
         double ceil = Math.ceil(a);
         System.out.println(ceil);
 
-        double round = Math.round(a);
-        System.out.println(round);
-
+        // rounded down to the nearest whole number
         double floor = Math.round(a);
         System.out.println(floor);
+
+        double round = Math.round(a);
+        System.out.println(round);
 
         double rint = Math.rint(a);
         System.out.println(rint);
