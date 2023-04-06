@@ -4,6 +4,8 @@ public class Main {
             System.out.println("Task thread= " + getThreadInfo());
         };
 
+        task.run();
+
         System.out.println("Main thread= " + getThreadInfo());
     }
 
