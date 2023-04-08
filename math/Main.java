@@ -7,7 +7,7 @@ public class Main {
         System.out.println(ceil);
 
         // rounded down to the nearest whole number
-        double floor = Math.round(a);
+        double floor = Math.floor(a);
         System.out.println(floor);
 
         double round = Math.round(a);
