@@ -5,9 +5,6 @@ public class Main {
         MyThread myThread = new MyThread();
         myThread.start();
 
-        myThread = new MyThread();
-        myThread.start();
-
         System.out.println("Main thread=" + getThreadInfo());
     }
 

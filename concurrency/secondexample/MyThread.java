@@ -3,7 +3,13 @@ package secondexample;
 public class MyThread extends Thread{
     @Override
     public void run() {
-        System.out.println("MyThread thread=" + getThreadInfo());
+        System.out.println("MyThread started thread=" + getThreadInfo());
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("MyThread finished thread=" + getThreadInfo());
     }
 
     private static String getThreadInfo() {
