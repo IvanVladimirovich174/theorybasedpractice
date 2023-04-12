@@ -5,7 +5,7 @@ public class MyThread extends Thread{
     public void run() {
         System.out.println("MyThread started thread=" + getThreadInfo());
         try {
-            Thread.sleep(500);
+            Thread.sleep(5_000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
