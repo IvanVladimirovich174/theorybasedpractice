@@ -3,11 +3,13 @@ package secondexample;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         MyThread myThread = new MyThread();
+
+        System.out.println("Thread state: " + myThread.getState());
+
         myThread.start();
+        myThread.join();
 
-        myThread.join(1_000);
-
-        System.out.println("Main thread=" + getThreadInfo());
+        System.out.println("Thread state: " + myThread.getState());
     }
 
     private static String getThreadInfo() {

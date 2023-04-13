@@ -4,11 +4,7 @@ public class MyThread extends Thread{
     @Override
     public void run() {
         System.out.println("MyThread started thread=" + getThreadInfo());
-        try {
-            Thread.sleep(5_000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        System.out.println("Thread state: " + Thread.currentThread().getState());
         System.out.println("MyThread finished thread=" + getThreadInfo());
     }
 
