@@ -4,12 +4,10 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
         MyThread myThread = new MyThread();
 
-        System.out.println("Thread state: " + myThread.getState());
-
         myThread.start();
-        myThread.join();
+        Thread.sleep(2000);
 
-        System.out.println("Thread state: " + myThread.getState());
+        myThread.interrupt();
     }
 
     private static String getThreadInfo() {

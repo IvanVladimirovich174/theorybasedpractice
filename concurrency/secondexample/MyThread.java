@@ -1,10 +1,21 @@
 package secondexample;
 
-public class MyThread extends Thread{
+public class MyThread extends Thread {
     @Override
     public void run() {
         System.out.println("MyThread started thread=" + getThreadInfo());
-        System.out.println("Thread state: " + Thread.currentThread().getState());
+
+        while (!isInterrupted()) {
+            System.out.println("DoSomething");
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+                System.out.println("Thread state= " + Thread.currentThread().getState());
+                break;
+            }
+        }
+
         System.out.println("MyThread finished thread=" + getThreadInfo());
     }
 
