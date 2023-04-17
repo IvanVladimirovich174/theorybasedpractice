@@ -5,16 +5,21 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
+        Object monitor = new Object();
+
         Counter counter = new Counter();
 
         List<Thread> threadList = new ArrayList<>();
 
         for (int i = 0; i < 10; ++i) {
+
             Runnable task = () -> {
                 System.out.println("Thread started id= " + Thread.currentThread().getId());
 
                 for (int j = 0; j < 1000; ++j) {
-                    counter.increment();
+                    synchronized (monitor) {
+                        counter.increment();
+                    }
                 }
 
                 System.out.println("Thread finished id= " + Thread.currentThread().getId());
