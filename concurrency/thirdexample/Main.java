@@ -17,9 +17,7 @@ public class Main {
                 System.out.println("Thread started id= " + Thread.currentThread().getId());
 
                 for (int j = 0; j < 1000; ++j) {
-                    synchronized (monitor) {
-                        counter.increment();
-                    }
+                    counter.increment();
                 }
 
                 System.out.println("Thread finished id= " + Thread.currentThread().getId());
