@@ -9,7 +9,9 @@ public class Counter {
     }
 
     public void increment() {
-        digit = digit + 1;
+        synchronized (this) {
+            digit = digit + 1;
+        }
     }
 
     @Override
