@@ -1,22 +1,25 @@
 package fourthexample;
 
 public class MyThread extends Thread {
+    Object monitor;
+
+    public MyThread(Object monitor) {
+        this.monitor = monitor;
+    }
+
     @Override
     public void run() {
-        System.out.println("MyThread started thread=" + getThreadInfo());
+        System.out.println("Mythread started thread=" + getThreadInfo());
 
-        while (!isInterrupted()) {
-            System.out.println("DoSomething");
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-                System.out.println("Thread state= " + Thread.currentThread().getState());
-                break;
-            }
+        try {
+            Thread.sleep(5_000);
+        } catch (InterruptedException e) {
         }
 
-        System.out.println("MyThread finished thread=" + getThreadInfo());
+        System.out.println("Mythread finished thread=" + getThreadInfo());
+        synchronized (monitor) {
+            monitor.notify();
+        }
     }
 
     private static String getThreadInfo() {
