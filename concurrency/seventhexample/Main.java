@@ -12,6 +12,7 @@ public class Main {
         System.out.println("Main thread finished" + getThreadInfo());
 
         ExecutorService executorService = Executors.newFixedThreadPool(4);
+        executorService.submit(task);
     }
 
     private static String getThreadInfo() {
