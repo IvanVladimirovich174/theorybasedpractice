@@ -1,18 +1,20 @@
 package seventhexample;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 
 public class Main {
-    public static void main(String[] args) {
-        Runnable task = () -> {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
+        Callable<String> task = () -> {
             System.out.println("In task thread=" + getThreadInfo());
+            return "Hello world!";
         };
 
         System.out.println("Main thread finished" + getThreadInfo());
 
         ExecutorService executorService = Executors.newFixedThreadPool(4);
-        executorService.submit(task);
+        Future<String> future = executorService.submit(task);
+        String result = future.get();
+        System.out.println(result);
     }
 
     private static String getThreadInfo() {
