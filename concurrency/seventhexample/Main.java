@@ -9,12 +9,11 @@ public class Main {
             return "Hello world!";
         };
 
-        System.out.println("Main thread finished" + getThreadInfo());
-
         ExecutorService executorService = Executors.newFixedThreadPool(4);
         Future<String> future = executorService.submit(task);
         String result = future.get();
-        System.out.println(result);
+
+        System.out.println("Main thread finished" + getThreadInfo() + " result" + result);
     }
 
     private static String getThreadInfo() {
