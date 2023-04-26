@@ -1,4 +1,4 @@
-package seventhexample;
+package eighthexample;
 
 import java.util.concurrent.*;
 
@@ -20,9 +20,9 @@ public class Main {
 
         ExecutorService executorService = Executors.newFixedThreadPool(4);
         Future<String> future = executorService.submit(task);
-        Thread.sleep(5000);
 
-        future.cancel(true);
+        Thread.sleep(5000);
+        executorService.shutdown();
 
         System.out.println("Main thread finished " + getThreadInfo());
     }
