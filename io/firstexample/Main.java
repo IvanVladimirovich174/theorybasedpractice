@@ -1,3 +1,5 @@
+package firstexample;
+
 import java.io.IOException;
 import java.io.InputStream;
 
