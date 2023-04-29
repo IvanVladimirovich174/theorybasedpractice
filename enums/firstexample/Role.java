@@ -1,11 +1,11 @@
 package firstexample;
 
 public enum Role {
-    USER ("User"),
-    ADMIN ("Admin"),
-    COURIER ("Courier"),
-    COOK ("Cook"),
-    CASHIER ("Cashier");
+    USER("User"),
+    ADMIN("Admin"),
+    COURIER("Courier"),
+    COOK("Cook"),
+    CASHIER("Cashier");
 
     private final String roleText;
 
