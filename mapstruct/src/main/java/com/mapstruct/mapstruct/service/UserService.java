@@ -1,6 +1,6 @@
 package com.mapstruct.mapstruct.service;
 
-import com.mapstruct.mapstruct.model.User;
+import com.mapstruct.mapstruct.model.Book;
 import com.mapstruct.mapstruct.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -14,19 +14,19 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public List<User> getAllUsers() {
+    public List<Book> getAllUsers() {
         return userRepository.findAll();
     }
 
-    public User getOneUser(Long id) {
+    public Book getOneUser(Long id) {
         return userRepository.findById(id).orElseThrow();
     }
 
-    public User createUser(User user) {
+    public Book createUser(Book user) {
         return userRepository.save(user);
     }
 
-    public User updateUser(User user) {
+    public Book updateUser(Book user) {
         return userRepository.save(user);
     }
 
