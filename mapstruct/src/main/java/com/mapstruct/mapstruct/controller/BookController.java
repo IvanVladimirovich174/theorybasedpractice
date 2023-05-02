@@ -1,42 +1,42 @@
 package com.mapstruct.mapstruct.controller;
 
 import com.mapstruct.mapstruct.model.Book;
-import com.mapstruct.mapstruct.service.UserService;
+import com.mapstruct.mapstruct.service.BookService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/book")
 public class BookController {
-    private final UserService userService;
+    private final BookService userService;
 
-    public BookController(UserService userService) {
+    public BookController(BookService userService) {
         this.userService = userService;
     }
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public List<Book> list() {
-        return userService.getAllUsers();
+        return userService.getAllBooks();
     }
 
     @GetMapping(value = "/{id}")
     public Book getById(@PathVariable Long id) {
-        return userService.getOneUser(id);
+        return userService.getOneBook(id);
     }
 
     @PostMapping
-    public Book create(@RequestBody Book user) {
-        return userService.createUser(user);
+    public Book create(@RequestBody Book book) {
+        return userService.createBook(book);
     }
 
     @PutMapping
-    public Book update(@RequestBody Book user) {
-        return userService.updateUser(user);
+    public Book update(@RequestBody Book book) {
+        return userService.updateBook(book);
     }
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
-        userService.deleteUser(id);
+        userService.deleteBook(id);
     }
 }
