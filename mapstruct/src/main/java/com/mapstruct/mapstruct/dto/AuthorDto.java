@@ -1,5 +1,9 @@
 package com.mapstruct.mapstruct.dto;
 
-public class AuthorDto {
+import java.util.Set;
 
+public class AuthorDto {
+    private Long id;
+    private String authorFIO;
+    private Set<Long> booksId;
 }
