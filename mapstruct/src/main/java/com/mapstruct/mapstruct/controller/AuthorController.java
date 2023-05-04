@@ -1,12 +1,12 @@
 package com.mapstruct.mapstruct.controller;
 
+import com.mapstruct.mapstruct.dto.AuthorDto;
+import com.mapstruct.mapstruct.mapper.AuthorMapper;
 import com.mapstruct.mapstruct.model.Author;
 import com.mapstruct.mapstruct.service.AuthorService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/author")
@@ -18,8 +18,10 @@ public class AuthorController {
     }
 
     @PostMapping
-    public Author create(@RequestBody Author author) {
-        return authorService.createAuthor(author);
+    public ResponseEntity<?> create(@RequestBody AuthorDto authorDto) {
+        return ResponseEntity.status(HttpStatus.OK).
+                body(AuthorMapper.INSTANCE.toDto(authorService.
+                        createAuthor(AuthorMapper.INSTANCE.toEntity(authorDto))));
     }
 
     @GetMapping(value = "/{id}")
@@ -38,7 +40,7 @@ public class AuthorController {
     }
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public ResponseEntity<List<Author>> list() {
+    public ResponseEntity<?> list() {
         return ResponseEntity.status(HttpStatus.OK).body(authorService.getAllAuthors());
     }
 }

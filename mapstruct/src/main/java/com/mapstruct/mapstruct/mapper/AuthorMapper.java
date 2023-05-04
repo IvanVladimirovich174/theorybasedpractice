@@ -5,10 +5,11 @@ import com.mapstruct.mapstruct.model.Author;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
-@Mapper
+@Mapper(uses = BookMapper.class)
 public interface AuthorMapper {
     AuthorMapper INSTANCE = Mappers.getMapper(AuthorMapper.class);
 
     AuthorDto toDto(Author author);
+
     Author toEntity(AuthorDto authorDto);
 }
