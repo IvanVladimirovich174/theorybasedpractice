@@ -18,10 +18,10 @@ public class Author {
     @Setter(AccessLevel.NONE)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "author_id_generator")
     @SequenceGenerator(name = "author_id_generator", sequenceName = "seq_author_id", allocationSize = 1)
-    @Column(name = "author_id", nullable = false)
+    @Column(name = "author_id")
     private Long id;
 
-    @Column(name = "authorFIO", nullable = false)
+    @Column(name = "authorFIO")
     private String authorFIO;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.ALL})

@@ -1,9 +1,18 @@
 package com.mapstruct.mapstruct.dto;
 
-import java.util.Set;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter
+@Getter
 public class AuthorDto {
+    @JsonProperty("id")
     private Long id;
+
+    @JsonProperty("authorFIO")
     private String authorFIO;
-    private Set<Long> booksId;
+
+/*    @JsonProperty("booksId")
+    private Set<Long> booksId;*/
 }

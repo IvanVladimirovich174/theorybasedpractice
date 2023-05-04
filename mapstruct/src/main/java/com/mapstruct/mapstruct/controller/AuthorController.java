@@ -12,16 +12,17 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/author")
 public class AuthorController {
     private final AuthorService authorService;
+    private final AuthorMapper authorMapper;
 
-    public AuthorController(AuthorService authorService) {
+    public AuthorController(AuthorService authorService, AuthorMapper authorMapper) {
         this.authorService = authorService;
+        this.authorMapper = authorMapper;
     }
 
     @PostMapping
     public ResponseEntity<?> create(@RequestBody AuthorDto authorDto) {
         return ResponseEntity.status(HttpStatus.OK).
-                body(AuthorMapper.INSTANCE.toDto(authorService.
-                        createAuthor(AuthorMapper.INSTANCE.toEntity(authorDto))));
+                body(authorService.createAuthor(authorMapper.toEntity(authorDto)));
     }
 
     @GetMapping(value = "/{id}")
