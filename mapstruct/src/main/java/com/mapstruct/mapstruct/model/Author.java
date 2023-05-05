@@ -3,6 +3,7 @@ package com.mapstruct.mapstruct.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -11,6 +12,7 @@ import java.util.Set;
 @Getter
 @Setter
 @Entity
+@Builder
 @Table(name = "authors")
 public class Author {
     @Id
@@ -21,10 +23,16 @@ public class Author {
     @Column(name = "author_id")
     private Long id;
 
-    @Column(name = "authorFIO")
+    @Basic
+    @Column(name = "author_fio")
     private String authorFIO;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.ALL})
+    @Basic
+    @Temporal(TemporalType.DATE)
+    @Column(name = "birth_date")
+    private Date birthDate;
+
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "books_authors",
             joinColumns = @JoinColumn(name = "author_id"),
