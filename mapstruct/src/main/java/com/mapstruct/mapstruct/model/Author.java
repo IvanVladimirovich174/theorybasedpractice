@@ -1,5 +1,6 @@
 package com.mapstruct.mapstruct.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -29,6 +30,7 @@ public class Author {
 
     @Basic
     @Temporal(TemporalType.DATE)
+    @JsonFormat(pattern = "yyyy-MM-dd")
     @Column(name = "birth_date")
     private Date birthDate;
 

@@ -25,6 +25,12 @@ public class AuthorController {
                 body(authorService.createAuthor(authorMapper.toEntity(authorDto)));
     }
 
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    public ResponseEntity<?> list() {
+        return ResponseEntity.status(HttpStatus.OK).
+                body(authorMapper.getAllDto(authorService.getAllAuthors()));
+    }
+
     @GetMapping(value = "/{id}")
     public Author getById(@PathVariable Long id) {
         return authorService.getOneAuthor(id);
@@ -38,10 +44,5 @@ public class AuthorController {
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
         authorService.deleteAuthor(id);
-    }
-
-    @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public ResponseEntity<?> list() {
-        return ResponseEntity.status(HttpStatus.OK).body(authorService.getAllAuthors());
     }
 }

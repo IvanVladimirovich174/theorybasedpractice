@@ -4,7 +4,7 @@ services:
     container_name: users
     image: postgres
     environment:
-      POSTGRES_DB: "users"
+      POSTGRES_DB: "authors_books"
       POSTGRES_USER: "postgres"
       POSTGRES_PASSWORD: "12345"
     ports:
