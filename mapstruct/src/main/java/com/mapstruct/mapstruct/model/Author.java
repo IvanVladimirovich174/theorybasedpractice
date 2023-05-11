@@ -17,7 +17,6 @@ import java.util.Set;
 @Table(name = "authors")
 public class Author {
     @Id
-    @Getter(AccessLevel.NONE)
     @Setter(AccessLevel.NONE)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "author_id_generator")
     @SequenceGenerator(name = "author_id_generator", sequenceName = "seq_author_id", allocationSize = 1)

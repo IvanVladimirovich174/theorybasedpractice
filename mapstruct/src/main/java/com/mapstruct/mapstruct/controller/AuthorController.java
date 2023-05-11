@@ -2,7 +2,6 @@ package com.mapstruct.mapstruct.controller;
 
 import com.mapstruct.mapstruct.dto.AuthorDto;
 import com.mapstruct.mapstruct.mapper.AuthorMapper;
-import com.mapstruct.mapstruct.model.Author;
 import com.mapstruct.mapstruct.service.AuthorService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,21 +27,17 @@ public class AuthorController {
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public ResponseEntity<?> list() {
         return ResponseEntity.status(HttpStatus.OK).
-                body(authorMapper.getAllDto(authorService.getAllAuthors()));
+                body(authorService.getAllAuthors());
     }
 
-    @GetMapping(value = "/{id}")
-    public Author getById(@PathVariable Long id) {
-        return authorService.getOneAuthor(id);
+    @DeleteMapping
+    public void delete(@RequestBody AuthorDto authorDto) {
+        authorService.deleteAuthor(authorDto.getId());
     }
 
     @PutMapping
-    public Author update(@RequestBody Author author) {
-        return authorService.updateAuthor(author);
-    }
-
-    @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id) {
-        authorService.deleteAuthor(id);
+    public ResponseEntity<?> update(@RequestBody AuthorDto authorDto) {
+        return ResponseEntity.status(HttpStatus.OK).
+                body(authorService.updateAuthor(authorMapper.toEntity(authorDto)));
     }
 }
