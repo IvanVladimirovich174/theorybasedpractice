@@ -19,6 +19,6 @@ public class AuthorDto {
     @JsonProperty("birthDate")
     private Date birthDate;
 
-    @JsonProperty("books")
-    private Set<BookDto> books;
+    @JsonProperty("booksId")
+    private Set<Long> booksId;
 }

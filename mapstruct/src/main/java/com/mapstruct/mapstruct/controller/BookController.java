@@ -1,42 +1,43 @@
 package com.mapstruct.mapstruct.controller;
 
-import com.mapstruct.mapstruct.model.Book;
+import com.mapstruct.mapstruct.dto.BookDto;
+import com.mapstruct.mapstruct.mapper.BookMapper;
 import com.mapstruct.mapstruct.service.BookService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/book")
 public class BookController {
-    private final BookService userService;
+    private final BookService bookService;
+    private final BookMapper bookMapper;
 
-    public BookController(BookService userService) {
-        this.userService = userService;
-    }
-
-    @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public List<Book> list() {
-        return userService.getAllBooks();
-    }
-
-    @GetMapping(value = "/{id}")
-    public Book getById(@PathVariable Long id) {
-        return userService.getOneBook(id);
+    public BookController(BookService bookService, BookMapper bookMapper) {
+        this.bookService = bookService;
+        this.bookMapper = bookMapper;
     }
 
     @PostMapping
-    public Book create(@RequestBody Book book) {
-        return userService.createBook(book);
+    public ResponseEntity<?> create(@RequestBody BookDto bookDto) {
+        return ResponseEntity.status(HttpStatus.OK).
+                body(bookService.createBook(bookMapper.toEntity(bookDto)));
     }
 
-    @PutMapping
-    public Book update(@RequestBody Book book) {
-        return userService.updateBook(book);
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    public ResponseEntity<?> list() {
+        return ResponseEntity.status(HttpStatus.OK).
+                body(bookService.getAllBooks());
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id) {
-        userService.deleteBook(id);
+    public void delete(@RequestBody BookDto bookDto) {
+        bookService.deleteBook(bookDto.getId());
+    }
+
+    @PutMapping
+    public ResponseEntity<?> update(@RequestBody BookDto bookDto) {
+        return ResponseEntity.status(HttpStatus.OK).
+                body(bookService.updateBook(bookMapper.toEntity(bookDto)));
     }
 }

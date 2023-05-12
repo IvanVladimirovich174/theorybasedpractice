@@ -15,6 +15,6 @@ public class BookDto {
     @JsonProperty("title")
     private String title;
 
-    @JsonProperty("authors")
-    private Set<AuthorDto> authors;
+    @JsonProperty("authorsId")
+    private Set<Long> authorsId;
 }
