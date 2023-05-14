@@ -21,7 +21,7 @@ public class BookController {
     @PostMapping
     public ResponseEntity<?> create(@RequestBody BookDto bookDto) {
         return ResponseEntity.status(HttpStatus.OK).
-                body(bookService.createBook(bookMapper.toEntity(bookDto)));
+                body(bookService.createBook(bookMapper.toBookEntity(bookDto)));
     }
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
@@ -30,7 +30,7 @@ public class BookController {
                 body(bookService.getAllBooks());
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping
     public void delete(@RequestBody BookDto bookDto) {
         bookService.deleteBook(bookDto.getId());
     }
@@ -38,6 +38,6 @@ public class BookController {
     @PutMapping
     public ResponseEntity<?> update(@RequestBody BookDto bookDto) {
         return ResponseEntity.status(HttpStatus.OK).
-                body(bookService.updateBook(bookMapper.toEntity(bookDto)));
+                body(bookService.updateBook(bookMapper.toBookEntity(bookDto)));
     }
 }

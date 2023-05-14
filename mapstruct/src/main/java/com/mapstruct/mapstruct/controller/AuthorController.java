@@ -21,7 +21,7 @@ public class AuthorController {
     @PostMapping
     public ResponseEntity<?> create(@RequestBody AuthorDto authorDto) {
         return ResponseEntity.status(HttpStatus.OK).
-                body(authorService.createAuthor(authorMapper.toEntity(authorDto)));
+                body(authorService.createAuthor(authorMapper.toAuthorEntity(authorDto)));
     }
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
@@ -38,6 +38,6 @@ public class AuthorController {
     @PutMapping
     public ResponseEntity<?> update(@RequestBody AuthorDto authorDto) {
         return ResponseEntity.status(HttpStatus.OK).
-                body(authorService.updateAuthor(authorMapper.toEntity(authorDto)));
+                body(authorService.updateAuthor(authorMapper.toAuthorEntity(authorDto)));
     }
 }

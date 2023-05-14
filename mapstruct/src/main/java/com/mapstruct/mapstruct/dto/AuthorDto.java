@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Date;
-import java.util.Set;
 
 @Setter
 @Getter
@@ -18,7 +17,4 @@ public class AuthorDto {
 
     @JsonProperty("birthDate")
     private Date birthDate;
-
-    @JsonProperty("booksId")
-    private Set<Long> booksId;
 }
