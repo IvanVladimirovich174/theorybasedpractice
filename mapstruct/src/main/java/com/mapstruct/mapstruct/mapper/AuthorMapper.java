@@ -5,17 +5,19 @@ import com.mapstruct.mapstruct.dto.AuthorWithBooksDto;
 import com.mapstruct.mapstruct.model.Author;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.Named;
 
 import java.util.List;
 
 @Mapper(componentModel = "spring", uses = BookMapper.class)
 public interface AuthorMapper {
+    @Named(value = "toAuthorDto")
     AuthorDto toAuthorDto(Author author);
 
     Author toAuthorEntity(AuthorDto authorDto);
 
-    @Mapping(source = "books", target = "books")
-    AuthorWithBooksDto toAuthorsWithBooksDto(Author author);
+    @Mapping(source = "books", target = "booksDto", qualifiedByName = "toBookDto")
+    AuthorWithBooksDto toAuthorWithBooksDto(Author author);
 
     List<AuthorDto> toListBookDto(List<Author> author);
 }
