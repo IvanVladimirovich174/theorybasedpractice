@@ -3,6 +3,7 @@ package com.mapstruct.mapstruct.controller;
 import com.mapstruct.mapstruct.dto.BookDto;
 import com.mapstruct.mapstruct.mapper.BookMapper;
 import com.mapstruct.mapstruct.service.BookService;
+import lombok.NonNull;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -27,11 +28,12 @@ public class BookController {
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public ResponseEntity<?> list() {
         return ResponseEntity.status(HttpStatus.OK).
-                body(bookService.getAllBooks());
+                body(bookMapper.toListBookWithAuthorsDto(bookService.getAllBooks()));
     }
 
     @DeleteMapping
-    public void delete(@RequestBody BookDto bookDto) {
+    public void delete(@RequestBody
+                       @NonNull BookDto bookDto) {
         bookService.deleteBook(bookDto.getId());
     }
 
