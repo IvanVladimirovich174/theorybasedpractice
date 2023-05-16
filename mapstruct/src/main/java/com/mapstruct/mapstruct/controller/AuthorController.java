@@ -45,8 +45,8 @@ public class AuthorController {
     }
 
     @PostMapping("/add-book")
-    public ResponseEntity<?> addBook(AddBookDto addBookDto) {
+    public ResponseEntity<?> addBook(@RequestBody AddBookDto addBookDto) {
         return ResponseEntity.status(HttpStatus.OK).
-                body(authorService.addBook(addBookDto));
+                body(authorMapper.toAuthorWithBooksDto(authorService.addBook(addBookDto)));
     }
 }

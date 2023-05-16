@@ -19,7 +19,7 @@ public interface AuthorMapper {
     @Mapping(source = "books", target = "booksDto", qualifiedByName = "toBookDto")
     AuthorWithBooksDto toAuthorWithBooksDto(Author author);
 
-    List<AuthorDto> toListBookDto(List<Author> authorList);
+    List<AuthorDto> toListAuthorDto(List<Author> authorList);
 
     List<AuthorWithBooksDto> toListAuthorWithBooksDto(List<Author> authorList);
 }
