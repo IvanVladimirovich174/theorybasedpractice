@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   postgres:
-    container_name: users
+    container_name: authors_books
     image: postgres
     environment:
       POSTGRES_DB: "authors_books"
