@@ -10,8 +10,14 @@ public class MethodsOfStringBuilderClass {
         System.out.println(stringBuilder.length());
         System.out.println(stringBuilder.isEmpty());
 
-        stringBuilder = new StringBuilder("Ivan Meshkov");
+        stringBuilder = new StringBuilder("Ivan ");
         System.out.println(stringBuilder.length());
         System.out.println(stringBuilder.isEmpty());
+
+        stringBuilder.append("Meshkov");
+        System.out.println(stringBuilder);
+
+        System.out.println(stringBuilder.reverse());
+        System.out.println(stringBuilder.reverse());
     }
 }
