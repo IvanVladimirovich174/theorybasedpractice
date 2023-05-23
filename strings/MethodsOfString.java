@@ -1,7 +1,5 @@
 package strings;
 
-import java.util.Arrays;
-
 public class MethodsOfString {
     public static void main(String[] args) {
         String str1 = "Welcome to Java";
