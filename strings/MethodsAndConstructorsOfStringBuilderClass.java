@@ -5,18 +5,24 @@ public class MethodsAndConstructorsOfStringBuilderClass {
 
         // Constructor() without params
         StringBuilder stringBuilder = new StringBuilder();
-        System.out.println(stringBuilder.length());
-        System.out.println(stringBuilder.isEmpty());
+        System.out.println("Length= " + stringBuilder.length());
+        System.out.println("Is empty= " + stringBuilder.isEmpty());
+        System.out.println("Capacity= " + stringBuilder.capacity());
+        System.out.println();
 
         // Constructor() with capacity parameter
         stringBuilder = new StringBuilder(12);
-        System.out.println(stringBuilder.length());
-        System.out.println(stringBuilder.isEmpty());
+        System.out.println("Length= " + stringBuilder.length());
+        System.out.println("Is empty= " + stringBuilder.isEmpty());
+        System.out.println("Capacity= " + stringBuilder.capacity());
+        System.out.println();
 
         // Constructor() with string parameter
         stringBuilder = new StringBuilder("Ivan ");
-        System.out.println(stringBuilder.length());
-        System.out.println(stringBuilder.isEmpty());
+        System.out.println("Length= " + stringBuilder.length());
+        System.out.println("Is empty= " + stringBuilder.isEmpty());
+        System.out.println("Capacity= " + stringBuilder.capacity());
+        System.out.println();
 
         // .append() method with string parameter
         stringBuilder.append("Meshkov");
