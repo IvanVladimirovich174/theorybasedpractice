@@ -38,5 +38,10 @@ public class MethodsAndConstructorsOfStringBuilderClass {
         System.out.println(stringBuilder.reverse());
         System.out.println(stringBuilder);
         System.out.println(stringBuilder.reverse());
+        System.out.println();
+
+        // .delete() method
+        System.out.println(stringBuilder.delete(4, 12));
+        System.out.println();
     }
 }
