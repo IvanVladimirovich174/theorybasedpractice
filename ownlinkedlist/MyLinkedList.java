@@ -36,4 +36,29 @@ public class MyLinkedList {
         }
         ++size;
     }
+
+    public void addAtIndex(int index, int value) {
+        if (index < 0 || index > this.size) {
+            return;
+        }
+
+        if (index == 0) {
+            addAtHead(value);
+            return;
+        }
+
+        if (index == this.size) {
+            addAtTail(value);
+            return;
+        }
+
+        Node node = this.head;
+        for (int i = 0; i < index - 1; ++i) {
+            node = node.next;
+        }
+
+        Node newNode = new Node(value, node.next);
+        node.next = newNode;
+        ++size;
+    }
 }
