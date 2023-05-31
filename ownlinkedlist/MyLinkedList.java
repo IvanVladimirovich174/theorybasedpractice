@@ -17,8 +17,18 @@ public class MyLinkedList {
         this.head = null;
     }
 
+    public int get(int index) {
+        Node node = this.head;
+
+        for (int i = 0; i < index; ++i) {
+            node = node.next;
+        }
+
+        return node.value;
+    }
+
     public void addAtHead(int value) {
-        Node node = new Node(value, head);
+        Node node = new Node(value, this.head);
 
         this.head = node;
         ++size;
