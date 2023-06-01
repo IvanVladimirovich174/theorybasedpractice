@@ -71,4 +71,28 @@ public class MyLinkedList {
         node.next = newNode;
         ++size;
     }
+
+    public void deleteAtIndex(int index) {
+        if (index < 0 || index > size) {
+            return;
+        }
+
+        if (index == 0) {
+            head = head.next;
+            --size;
+            return;
+        }
+
+        Node node = head;
+        for (int i = 0; i < size - 1; ++i) {
+            node = node.next;
+        }
+
+        if (index == size - 1) {
+            node.next = null;
+        } else {
+            node.next = node.next.next;
+        }
+        --size;
+    }
 }
