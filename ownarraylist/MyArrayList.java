@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class MyArrayList {
     private static final int DEFAULT_CAPACITY = 5;
     private int[] array;
@@ -25,5 +27,15 @@ public class MyArrayList {
             throw new IndexOutOfBoundsException();
         }
         return array[index];
+    }
+
+    public void add(int element) {
+        if (this.size >= capacity) {
+            capacity *= 2;
+            array = Arrays.copyOf(array, capacity);
+        }
+
+        array[size] = element;
+        ++size;
     }
 }
