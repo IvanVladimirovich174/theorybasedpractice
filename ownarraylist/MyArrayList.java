@@ -23,7 +23,7 @@ public class MyArrayList {
     }
 
     public int get(int index) {
-        if (index < 0 || index >= this.size) {
+        if (index < 0 || index > this.size) {
             throw new IndexOutOfBoundsException();
         }
         return array[index];
