@@ -19,7 +19,7 @@ public interface AuthorMapper {
 
     Author toAuthorEntity(AuthorDto authorDto);
 
-    @Mapping(source = "books", target = "booksDto", qualifiedByName = "toBookDto")
+    @Mapping(source = "books", target = "booksDto", qualifiedByName = "toBookDto", ignore = true)
     AuthorWithBooksDto toAuthorWithBooksDto(Author author);
 
     List<AuthorDto> toListAuthorDto(List<Author> authorList);

@@ -4,7 +4,6 @@ import com.mapstruct.mapstruct.dto.BookDto;
 import com.mapstruct.mapstruct.mapper.BookMapper;
 import com.mapstruct.mapstruct.service.BookService;
 import lombok.NonNull;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +14,7 @@ public class BookController {
     private final BookService bookService;
     private final BookMapper bookMapper;
 
-    public BookController(BookService bookService, @Lazy BookMapper bookMapper) {
+    public BookController(BookService bookService, BookMapper bookMapper) {
         this.bookService = bookService;
         this.bookMapper = bookMapper;
     }

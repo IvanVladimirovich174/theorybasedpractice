@@ -5,7 +5,6 @@ import com.mapstruct.mapstruct.dto.AuthorDto;
 import com.mapstruct.mapstruct.mapper.AuthorMapper;
 import com.mapstruct.mapstruct.service.AuthorService;
 import lombok.NonNull;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +15,7 @@ public class AuthorController {
     private final AuthorService authorService;
     private final AuthorMapper authorMapper;
 
-    public AuthorController(AuthorService authorService, @Lazy AuthorMapper authorMapper) {
+    public AuthorController(AuthorService authorService, AuthorMapper authorMapper) {
         this.authorService = authorService;
         this.authorMapper = authorMapper;
     }
