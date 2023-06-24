@@ -4,6 +4,7 @@ import com.mapstruct.mapstruct.dto.BookDto;
 import com.mapstruct.mapstruct.mapper.BookMapper;
 import com.mapstruct.mapstruct.service.BookService;
 import lombok.NonNull;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +15,7 @@ public class BookController {
     private final BookService bookService;
     private final BookMapper bookMapper;
 
-    public BookController(BookService bookService, BookMapper bookMapper) {
+    public BookController(BookService bookService, @Lazy BookMapper bookMapper) {
         this.bookService = bookService;
         this.bookMapper = bookMapper;
     }
@@ -22,13 +23,13 @@ public class BookController {
     @PostMapping
     public ResponseEntity<?> create(@RequestBody BookDto bookDto) {
         return ResponseEntity.status(HttpStatus.OK).
-                body(bookService.createBook(bookMapper.toBookEntity(bookDto)));
+                body(bookService.createBook(bookMapper.INSTANCE.toBookEntity(bookDto)));
     }
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public ResponseEntity<?> list() {
         return ResponseEntity.status(HttpStatus.OK).
-                body(bookMapper.toListBookWithAuthorsDto(bookService.getAllBooks()));
+                body(bookMapper.INSTANCE.toListBookWithAuthorsDto(bookService.getAllBooks()));
     }
 
     @DeleteMapping
@@ -40,6 +41,6 @@ public class BookController {
     @PutMapping
     public ResponseEntity<?> update(@RequestBody BookDto bookDto) {
         return ResponseEntity.status(HttpStatus.OK).
-                body(bookService.updateBook(bookMapper.toBookEntity(bookDto)));
+                body(bookService.updateBook(bookMapper.INSTANCE.toBookEntity(bookDto)));
     }
 }
