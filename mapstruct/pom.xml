@@ -54,7 +54,7 @@
             <artifactId>mapstruct</artifactId>
             <version>1.5.5.Final</version>
         </dependency>
-        <!--<dependency>
+<!--        <dependency>
             <groupId>io.github.anweber</groupId>
             <artifactId>mapstruct-springlazy</artifactId>
             <version>1.0.0</version>
@@ -94,7 +94,7 @@
                     <source>17</source>
                     <target>17</target>
                     <annotationProcessorPaths>
-                        <!--<path>
+<!--                        <path>
                             <groupId>io.github.anweber</groupId>
                             <artifactId>mapstruct-springlazy</artifactId>
                             <version>1.0.0</version>

@@ -22,13 +22,13 @@ public class BookController {
     @PostMapping
     public ResponseEntity<?> create(@RequestBody BookDto bookDto) {
         return ResponseEntity.status(HttpStatus.OK).
-                body(bookService.createBook(bookMapper.INSTANCE.toBookEntity(bookDto)));
+                body(bookService.createBook(bookMapper.toBookEntity(bookDto)));
     }
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public ResponseEntity<?> list() {
         return ResponseEntity.status(HttpStatus.OK).
-                body(bookMapper.INSTANCE.toListBookWithAuthorsDto(bookService.getAllBooks()));
+                body(bookMapper.toListBookWithAuthorsDto(bookService.getAllBooks()));
     }
 
     @DeleteMapping
@@ -40,6 +40,6 @@ public class BookController {
     @PutMapping
     public ResponseEntity<?> update(@RequestBody BookDto bookDto) {
         return ResponseEntity.status(HttpStatus.OK).
-                body(bookService.updateBook(bookMapper.INSTANCE.toBookEntity(bookDto)));
+                body(bookService.updateBook(bookMapper.toBookEntity(bookDto)));
     }
 }

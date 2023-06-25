@@ -10,7 +10,7 @@ import org.mapstruct.factory.Mappers;
 
 import java.util.List;
 
-@Mapper(componentModel = "spring", uses = AuthorMapper.class)
+@Mapper(componentModel = "spring", uses = {AuthorMapper.class})
 public interface BookMapper {
     BookMapper INSTANCE = Mappers.getMapper(BookMapper.class);
 
@@ -19,8 +19,7 @@ public interface BookMapper {
 
     Book toBookEntity(BookDto bookDto);
 
-
-    @Mapping(source = "authors", target = "authorsDto", qualifiedByName = "toAuthorDto", ignore = true)
+    @Mapping(source = "authors", target = "authorsDto", qualifiedByName = "toAuthorDto")
     BookWithAuthorsDto toBookWithAuthorsDto(Book book);
 
     List<BookDto> toListBookDto(List<Book> bookList);

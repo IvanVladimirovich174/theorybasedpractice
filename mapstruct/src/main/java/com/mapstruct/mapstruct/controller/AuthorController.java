@@ -23,13 +23,13 @@ public class AuthorController {
     @PostMapping
     public ResponseEntity<?> create(@RequestBody AuthorDto authorDto) {
         return ResponseEntity.status(HttpStatus.OK).
-                body(authorService.createAuthor(authorMapper.INSTANCE.toAuthorEntity(authorDto)));
+                body(authorService.createAuthor(authorMapper.toAuthorEntity(authorDto)));
     }
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public ResponseEntity<?> list() {
         return ResponseEntity.status(HttpStatus.OK).
-                body(authorMapper.INSTANCE.toListAuthorWithBooksDto(authorService.getAllAuthors()));
+                body(authorMapper.toListAuthorWithBooksDto(authorService.getAllAuthors()));
     }
 
     @DeleteMapping
@@ -41,12 +41,12 @@ public class AuthorController {
     @PutMapping
     public ResponseEntity<?> update(@RequestBody AuthorDto authorDto) {
         return ResponseEntity.status(HttpStatus.OK).
-                body(authorService.updateAuthor(authorMapper.INSTANCE.toAuthorEntity(authorDto)));
+                body(authorService.updateAuthor(authorMapper.toAuthorEntity(authorDto)));
     }
 
     @PostMapping("/add-book")
     public ResponseEntity<?> addBook(@RequestBody AddBookDto addBookDto) {
         return ResponseEntity.status(HttpStatus.OK).
-                body(authorMapper.INSTANCE.toAuthorWithBooksDto(authorService.addBook(addBookDto)));
+                body(authorMapper.toAuthorWithBooksDto(authorService.addBook(addBookDto)));
     }
 }
