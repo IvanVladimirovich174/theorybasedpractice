@@ -6,14 +6,11 @@ import com.mapstruct.mapstruct.model.Author;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;
-import org.mapstruct.factory.Mappers;
 
 import java.util.List;
 
 @Mapper(componentModel = "spring", uses = {BookMapper.class})
 public interface AuthorMapper {
-    AuthorMapper INSTANCE = Mappers.getMapper(AuthorMapper.class);
-
     @Named(value = "toAuthorDto")
     AuthorDto toAuthorDto(Author author);
 
