@@ -32,7 +32,7 @@ public class User {
         }
 
         if (this == obj) {
-            return false;
+            return true;
         }
 
         if (this.getClass() != obj.getClass()) {
