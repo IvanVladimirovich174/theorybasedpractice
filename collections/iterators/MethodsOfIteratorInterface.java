@@ -28,5 +28,10 @@ public class MethodsOfIteratorInterface {
         }
 
         System.out.println("ArrayList after removing v3-string value: " + listOfStrings);
+
+        // invoke ConcurrentModificationException
+        for (String string : listOfStrings) {
+            listOfStrings.remove(1);
+        }
     }
 }
