@@ -1,3 +1,4 @@
 CREATE TABLE student (
-    PRIMARY KEY (id)
+    id constraint primary key,
+    name varchar(25)
 )
