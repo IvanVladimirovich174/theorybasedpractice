@@ -1,7 +1,6 @@
-CREATE TABLE weather (
-                         city            varchar(80),
-                         temp_lo         int,           -- минимальная температура дня
-                         temp_hi         int,           -- максимальная температура дня
-                         prcp            real,          -- уровень осадков
-                         date            date
+CREATE TABLE student (
+                         id              int primary key,
+                         name            char(25),      -- имя студента
+                         age             int,           -- возраст
+                         birthDate       date
 );
