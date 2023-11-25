@@ -5,7 +5,7 @@ CREATE TABLE student (
     birthDate       date           -- дата рождения студента
 );
 
-CREATE TABLE student (
+CREATE TABLE course (
    id              int primary key,
    course_name     char(25)        -- название курса
 );
